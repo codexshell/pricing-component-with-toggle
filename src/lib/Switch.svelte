@@ -5,7 +5,7 @@
 	export let handleKey;
 </script>
 
-<div aria-label="switch period" tabindex="0" on:click={handleClick} on:keydown={handleKey} class="switch">
+<div tabindex="0" on:click={handleClick} on:keydown={handleKey} class="switch">
 	<span class:toggle-on={$toggled} class="slider" />
 </div>
 

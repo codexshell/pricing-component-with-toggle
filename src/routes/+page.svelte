@@ -10,7 +10,7 @@
 
 <section class="flow">
 	<!--* card basic -->
-	<Card type="secondary" storage="500 GB" users="2" bandwidth="3">
+	<Card type="secondary" storage="500 GB" users="2" bandwidth="3" left>
 		<h2 class="card__header" slot="heading">Basic</h2>
 		<div class="card__price" slot="price">
 			{#if $toggled}
@@ -34,7 +34,7 @@
 	</Card>
 
 	<!--* card master -->
-	<Card type="secondary" storage="2 TB" users="10" bandwidth="50">
+	<Card type="secondary" storage="2 TB" users="10" bandwidth="50" right>
 		<h2 class="card__header" slot="heading">Master</h2>
 		<div class="card__price" slot="price">
 			{#if $toggled}
@@ -52,6 +52,17 @@
 		margin-top: 1.25rem;
 		--flow-space: theme('margin.8');
 		padding-bottom: theme('padding.16');
+		align-items: center;
+	}
+
+	@media (min-width: theme('screens.xl')) {
+		section {
+			display: flex;
+			flex-direction: row;
+			--flow-space: ;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 
 	.card__header {

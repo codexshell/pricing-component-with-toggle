@@ -15,9 +15,9 @@
 <header class="flow">
 	<h1>Our Pricing</h1>
 	<div class="period">
-		<span>Annually</span>
+		<span class:active={!$toggled}>Annually</span>
 		<Switch {handleClick} {handleKey} />
-		<span>Monthly</span>
+		<span class:active={$toggled}>Monthly</span>
 	</div>
 </header>
 
@@ -42,5 +42,9 @@
 
 	span {
 		font-size: theme('fontSize.sm');
+	}
+
+	.active {
+		color: theme('colors.n-dark-grayish-blue');
 	}
 </style>

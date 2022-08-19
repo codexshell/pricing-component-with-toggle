@@ -5,9 +5,11 @@
 	export let storage;
 	export let users;
 	export let bandwidth;
+	export let left;
+	export let right;
 </script>
 
-<div class="card | flow" class:card__professional={type === 'primary'}>
+<div class="card | flow" class:card__professional={type === 'primary'} class:left class:right>
 	<slot name="heading" />
 	<slot name="price" />
 	<div class="card__content">
@@ -26,6 +28,15 @@
 		padding-block: theme('padding.8');
 		padding-inline: theme('padding.6');
 		box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+		max-width: 21.45rem;
+		flex-basis: 24.45rem;
+		margin-inline: auto;
+	}
+
+	@media (min-width: theme('screens.xl')) {
+		.card {
+			margin-inline: 0;
+		}
 	}
 
 	p {
@@ -46,7 +57,23 @@
 		color: theme('colors.n-very-light-grayish-blue');
 	}
 
+	@media (min-width: theme('screens.xl')) {
+		.card__professional {
+			padding-block: theme('padding.14');
+		}
+	}
+
 	.border__professional {
-		border-color: rgba(255, 255, 255, .25);
+		border-color: rgba(255, 255, 255, 0.25);
+	}
+
+	.left {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.right {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
 	}
 </style>

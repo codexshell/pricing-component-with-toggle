@@ -21,10 +21,9 @@
 		background-size: 110%;
 	}
 
-	@media (min-width: theme("screens.xl")) {
+	@media (min-width: theme('screens.xl')) {
 		:global(body) {
-			background-image: url('bg-top.svg'),
-			url('bg-bottom.svg');
+			background-image: url('/bg-top.svg'), url('/bg-bottom.svg');
 			background-repeat: no-repeat, no-repeat;
 			background-size: 26%, 20%;
 			background-position: top right, bottom left;

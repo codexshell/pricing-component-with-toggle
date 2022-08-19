@@ -8,6 +8,7 @@
 
 <style>
 	button {
+		--flow-space: 2rem;
 		text-transform: uppercase;
 		font-size: theme('fontSize.xs');
 		letter-spacing: 0.15rem;

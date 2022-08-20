@@ -67,13 +67,15 @@
 		border-color: rgba(255, 255, 255, 0.25);
 	}
 
-	.left {
-		border-top-right-radius: 0;
-		border-bottom-right-radius: 0;
-	}
+	@media (min-width: theme('screens.xl')) {
+		.left {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
 
-	.right {
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
+		.right {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
 	}
 </style>
